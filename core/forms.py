@@ -5,8 +5,9 @@ from django_countries.widgets import CountrySelectWidget
 
 PAYMENT_CHOICES = (
     ('S', 'Stripe'),
-    ('P', 'PayPal'),
+    ('P', 'PayPal')
 )
+
 
 class CheckoutForm(forms.Form):
     street_address = forms.CharField(widget=forms.TextInput(attrs={
@@ -39,4 +40,3 @@ class CouponForm(forms.Form):
         'aria-label': 'Recipient\'s username',
         'aria-describedby': 'basic-addon2'
     }))
-
